@@ -1,0 +1,9 @@
+# 线上数据库
+server:
+  port: 5288
+spring:
+  datasource:
+    username: mybatis
+    password: 123456
+    url: jdbc:mysql://39.105.19.143:3306/mybatis
+    driver-class-name: com.mysql.cj.jdbc.Driver

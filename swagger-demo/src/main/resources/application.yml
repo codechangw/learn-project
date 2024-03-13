@@ -1,0 +1,9 @@
+
+server:
+  port: 8085
+spring:
+  application:
+    name: swagger-demo
+  mvc:
+    path match:
+      matching-strategy: ant_path_matcher

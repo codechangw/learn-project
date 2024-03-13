@@ -1,0 +1,6 @@
+#   log日志
+logging:
+  level:
+    com.example: debug
+    org.springframework: warn
+  config: classpath:logback.xml

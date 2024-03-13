@@ -1,0 +1,19 @@
+spring:
+  activemq:
+    user: admin
+    password: admin
+    broker-url: tcp://localhost:61616
+    pool:
+      enabled: true
+      max-connections: 10
+    queueEmail: email
+#    queue-name2: test3
+#    topic-name: test2
+
+#ActiveMQ
+#ActiveMQ:
+#  queueName: test-queue
+#  queueName2: test-queue2
+#  queueName3: test-queue3
+#  topicName: test-topic
+#  topicName2: test-topic2

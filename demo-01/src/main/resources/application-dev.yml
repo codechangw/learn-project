@@ -1,0 +1,20 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: demo-01
+  datasource:
+    username: root
+    password: 123456
+    #url中test为对应的数据库名称
+    url: jdbc:mysql://localhost:3306/mybatis?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
+    driver-class-name: com.mysql.cj.jdbc.Driver
+mybatis:
+  mapper-locations: classpath:mapping/*.xml
+  type-aliases-package: com.example.demo01.entity
+
+#showSql
+logging:
+  level:
+    com.example.demo01.mapper: debug

@@ -1,0 +1,17 @@
+
+spring:
+  activemq:
+    user: admin
+    password: admin
+    broker-url: tcp://localhost:61616
+    pool:
+      enabled: true
+      max-connections: 20
+
+#ActiveMQ
+ActiveMQ:
+  queueEmail: queueEmail
+  queueSms: queueSms
+  topicTest1: topicTest1
+server:
+  port: 8082

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.demo01.mapper.MqtestMapper">
+
+
+    <!--增加mqtest信息-->
+    <insert id="save">
+        insert into mqtest (c1,c2,c3,c4) value (#{c1},#{c2},#{c3},#{c4})
+    </insert>
+
+
+    <!--根据id更改mqtest信息-->
+    <update id="update">
+        update mqtest
+        <set >
+            <if test="userName != null" >
+                c2 = #{c2,jdbcType=VARCHAR},
+            </if>
+            <if test="passWord != null" >
+                c3 = #{c3,jdbcType=VARCHAR},
+            </if>
+            <if test="realName != null" >
+                c4 = #{c4,jdbcType=VARCHAR},
+            </if>
+        </set>
+        where c1 = #{c1,jdbcType=VARCHAR}
+    </update>
+
+
+    <!--删除mqtest信息-->
+    <delete id="deleteById">
+        delete from mqtest where c1=#{c1}
+    </delete>
+
+
+    <!--查询mqtest信息-->
+    <select id="getMqtestInfo" resultType="com.example.demo01.entity.Mqtest">
+        select * from mqtest where c1 = #{c1}
+    </select>
+
+
+    <!--返回所有mqtest信息-->
+    <select id="selectAll" resultType="com.example.demo01.entity.Mqtest">
+        select * from mqtest
+    </select>
+</mapper>

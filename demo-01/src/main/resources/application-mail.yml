@@ -1,0 +1,17 @@
+spring:
+  mail:
+    host: smtp.163.com
+    password: OOBVZZLZJXHWRXEK
+    username: qq1579565441@163.com
+    #username: youxiang@163.com
+    #password: ZIJIDESHOUQUANMA
+    port:
+    default-encoding: UTF-8
+    protocol: smtp
+    properties:
+      mail.smtp.auth: true
+      mail.smtp.starttls.enable: true
+      mail.smtp.starttls.required: true
+      mail.smtp.socketFactory.port: 465
+      mail.smtp.socketFactory.class: javax.net.ssl.SSLSocketFactory
+      mail.smtp.socketFactory.fallback: false

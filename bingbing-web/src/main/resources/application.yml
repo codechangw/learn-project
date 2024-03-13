@@ -1,0 +1,14 @@
+# spring相关
+spring:
+  profiles:
+    #    默认开发环境
+    active: dev
+    #    引入其他配置文件
+    include: thymeleaf
+  mvc:
+    static-path-pattern: /**
+  web:
+    resources:
+      #      静态资源目录
+      static-locations: classpath:/static/
+
