@@ -1,6 +1,7 @@
 package book01.autowiringuse1;
 
 
+import book01.autowiringuse1.config.CDPlayerConfig;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
