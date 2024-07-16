@@ -20,6 +20,7 @@
         <module>spring-activemq</module>
         <module>swagger-demo</module>
         <module>fileRead</module>
+        <module>kafkaLearn</module>
     </modules>
 
     <properties>
