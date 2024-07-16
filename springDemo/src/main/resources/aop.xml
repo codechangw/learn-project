@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+    <bean id="knight" class="book01.aop.BraveKnight">
+        <constructor-arg ref="queue"/>
+    </bean>
+
+    <bean id="queue" class="book01.aop.KillTrigger">
+        <constructor-arg value="#{T(System).out}"/>
+    </bean>
+
+    <!--声明 shiren bean-->
+    <bean id="shiren" class="book01.aop.ShiRen">
+        <constructor-arg value="#{T(System).out}"/>
+    </bean>
+
+    <aop:config>
+        <!--将shiren 定义为一个切面-->
+        <aop:aspect ref="shiren">
+            <!--定义切点  切点id 自己起名称-->
+            <aop:pointcut id="ddd" expression="execution(* *.DoTask(..))"/>     <!--这里是aspectJ 切点表达式    切点方法-->
+            <aop:before pointcut-ref="ddd" method="before"/>    <!--声明前置通知-->
+            <aop:after pointcut-ref="ddd" method="after" />     <!--声明后置通知-->
+        </aop:aspect>
+    </aop:config>
+</beans>

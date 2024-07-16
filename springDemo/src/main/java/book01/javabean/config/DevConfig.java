@@ -8,17 +8,17 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 
 /**
- * @className Config 
- * @description  
+ * @className Config
+ * @description
  * @author c.w
  * @date 2024/03/15
-**/
-@Profile("pro")
+ **/
+@Profile("dev")
 @Configuration      //没有了@ComponentScan ,是不会扫描组件的
-public class Config {
+public class DevConfig {
 
     @Bean   //如果没有指定name属性，则此bean的ID为此方法名
-            //
+    //
     //@Bean(name = "cdCdCd")
     public CompactDisc setCD(){
         return new SgtPeppers();
