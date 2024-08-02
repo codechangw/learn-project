@@ -1,6 +1,5 @@
 package com.chang.utils.activemq;
 
-import com.alibaba.fastjson.JSON;
 import org.apache.activemq.command.ActiveMQTextMessage;
 import org.springframework.jms.annotation.JmsListener;
 import org.springframework.messaging.handler.annotation.SendTo;
