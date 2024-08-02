@@ -25,7 +25,6 @@ public class ActiveMQTopicPublisher {
     public void publishMsg(String destinationName, String message) {
         if (destinationName.indexOf("topic") == 0) {
             logger.error("请规范命名：{},以topic为主题前缀", destinationName);
-            return;
         }
         logger.info("发布了一条主题{},消息{}。", destinationName, message);
         Destination destination = new ActiveMQTopic(destinationName);

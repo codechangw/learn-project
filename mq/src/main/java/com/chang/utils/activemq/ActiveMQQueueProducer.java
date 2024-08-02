@@ -30,7 +30,6 @@ public class ActiveMQQueueProducer {
     public void sendMsg(String destinationName, String message) {
         if (destinationName.indexOf("queue") == 0) {
             logger.error("请规范命名：{},以queue为队列前缀", destinationName);
-            return;
         }
         logger.info("发布了一条队列{}消息{}。", destinationName, message);
         Destination destination = new ActiveMQQueue(destinationName);
